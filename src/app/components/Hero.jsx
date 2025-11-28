@@ -1,0 +1,70 @@
+export default function Cover() {
+  const coverImg =
+    "https://images.unsplash.com/photo-1484249170766-998fa6efe3c0?grayscale&auto=format&w=1400&q=80";
+
+  return (
+    <div className="relative w-full h-[650px] bg-white overflow-hidden rounded-2xl">
+
+      {/* Blue top-left shape */}
+      <div
+        className="absolute top-0 left-0 w-full h-[260px] bg-blue-600"
+        style={{ clipPath: "polygon(0 0, 70% 0, 0 100%)" }}
+      ></div>
+
+      {/* Blue diagonal right shape */}
+      <div
+        className="absolute top-0 right-0 w-[57%] h-full bg-blue-500/80"
+        style={{ clipPath: "polygon(40% 0, 100% 0, 100% 100%, 0 60%)" }}
+      ></div>
+
+      {/* IMAGE OVERLAY */}
+      <div
+        className="absolute right-0 top-0 w-[55%] h-full overflow-hidden"
+        style={{ clipPath: "polygon(40% 0, 100% 0, 100% 100%, 0 60%)" }}
+      >
+        <img
+          src={coverImg}
+          className="w-full h-full object-cover opacity-80"
+          alt="Company Cover"
+        />
+      </div>
+
+      {/* ================= LOGO & COMPANY NAME ================= */}
+      <div className="absolute top-12 left-12 text-white">
+        <div className="flex items-center gap-3">
+
+          {/* Company Logo */}
+          <img
+            src="/ameya_logo.png"
+            alt="Ameya IT Logo"
+            className="w-16 h-16 object-contain rounded-full bg-white p-2 shadow-xl"
+          />
+
+          <div>
+            <h2 className="text-2xl font-bold tracking-wide">
+              Ameya IT Solutions
+            </h2>
+            <p className="text-sm opacity-90">Your Vision and Our Innovation</p>
+          </div>
+        </div>
+      </div>
+
+      {/* ================= COMPANY PROFILE TEXT ================= */}
+      <div className="absolute bottom-20 left-12">
+        <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+          COMPANY
+        </h1>
+        <h1 className="text-5xl font-bold text-blue-600 -mt-3">
+          PROFILE
+        </h1>
+
+        <p className="text-gray-600 text-sm max-w-lg mt-6 leading-relaxed">
+          Ameya IT Solutions specializes in SAP Integration, Cloud Engineering,
+          AI Automation, and full-stack development helping businesses innovate
+          and accelerate digital transformation.
+        </p>
+      </div>
+
+    </div>
+  );
+}
