@@ -10,11 +10,11 @@ export default function Cover() {
         bg-white overflow-hidden rounded-2xl
       "
     >
-      {/* Blue left triangle - always visible */}
+      {/* BLUE LEFT TRIANGLE — FIXED FOR MOBILE + RESTORED FOR DESKTOP */}
       <div
         className="
           absolute top-0 left-0 w-full 
-          h-[270px] sm:h-[220px] md:h-[260px] 
+          h-[260px] sm:h-[330px] md:h-[300px] 
           bg-blue-600
         "
         style={{
@@ -22,7 +22,7 @@ export default function Cover() {
         }}
       ></div>
 
-      {/* Right blue diagonal shape - HIDE ON MOBILE */}
+      {/* RIGHT BLUE DIAGONAL SHAPE — HIDE ON MOBILE */}
       <div
         className="
           hidden sm:block
@@ -34,7 +34,7 @@ export default function Cover() {
         }}
       ></div>
 
-      {/* Right image overlay - HIDE ON MOBILE */}
+      {/* RIGHT IMAGE OVERLAY — HIDE ON MOBILE */}
       <div
         className="
           hidden sm:block
@@ -52,10 +52,9 @@ export default function Cover() {
         />
       </div>
 
-      {/* LOGO & TITLE */}
+      {/* LOGO + TITLE */}
       <div className="absolute top-6 left-6 sm:top-10 sm:left-10 text-white">
         <div className="flex items-center gap-3">
-
           <img
             src="/ameya_logo.png"
             alt="Ameya IT Logo"
@@ -64,7 +63,6 @@ export default function Cover() {
               object-contain rounded-full bg-white p-2 shadow-xl
             "
           />
-
           <div>
             <h2 className="text-lg sm:text-2xl font-bold tracking-wide">
               Ameya IT Solutions
