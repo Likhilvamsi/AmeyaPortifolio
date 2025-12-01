@@ -9,7 +9,7 @@ export default function Projects() {
         <div className="relative bg-white p-10 md:p-16 rounded-3xl shadow-xl overflow-hidden">
 
           {/* BLUE SHAPE — HIDDEN ON MOBILE, VISIBLE ON DESKTOP */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500 opacity-90 clip-path-polygon z-0 hidden md:block"></div>
+          <div className="absolute top-0 right-0 w-32 h-80 bg-blue-500 opacity-90 clip-path-polygon z-0 hidden md:block"></div>
 
           <style>{`
             .clip-path-polygon {
