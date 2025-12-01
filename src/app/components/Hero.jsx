@@ -14,7 +14,7 @@ export default function Cover() {
       <div
         className="
           absolute top-0 left-0 w-full 
-          h-[260px] sm:h-[330px] md:h-[300px] 
+          h-[300px] sm:h-[330px] md:h-[350px] 
           bg-blue-600
         "
         style={{
