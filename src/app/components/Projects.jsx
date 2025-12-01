@@ -4,8 +4,13 @@ export default function Projects() {
 
       {/* PAGE WRAPPER */}
       <div className="max-w-7xl mx-auto space-y-7">
+
+        {/* =================== PRODUCTS BANNER =================== */}
         <div className="relative bg-white p-10 md:p-16 rounded-3xl shadow-xl overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600 opacity-90 clip-path-polygon z-0"></div>
+
+          {/* BLUE SHAPE — HIDDEN ON MOBILE, VISIBLE ON DESKTOP */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500 opacity-90 clip-path-polygon z-0 hidden md:block"></div>
+
           <style>{`
             .clip-path-polygon {
               clip-path: polygon(100% 0, 100% 60%, 40% 100%, 0 100%, 0 0);
@@ -13,11 +18,13 @@ export default function Projects() {
           `}</style>
 
           <div className="relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-600">
               Our Products
             </h1>
             <p className="mt-4 text-gray-600 text-lg max-w-2xl">
-              Crafting high-impact digital products that combine cutting-edge technology, optimized workflows, and enterprise reliability.
+              Crafting high-impact digital products that combine 
+              cutting-edge technology, optimized workflows, 
+              and enterprise reliability.
             </p>
           </div>
         </div>
@@ -68,8 +75,6 @@ export default function Projects() {
           ]}
           reversed={false}
         />
-
-        {/* NEW PROJECTS ADDED WITH SLIDE EFFECT */}
 
         <ProjectItem
           image="https://cedcommerce.com/blog/wp-content/uploads/2017/02/2.png"
@@ -124,18 +129,17 @@ export default function Projects() {
         />
 
         <ProjectItem
-  image="https://static.vecteezy.com/system/resources/previews/026/567/943/original/human-resources-management-hr-department-employer-selects-candidates-online-recruitment-agency-employment-headhunting-business-modern-flat-cartoon-style-illustration-on-white-background-vector.jpg"
-  title="Staff & Resource Management"
-  description="Manage staff shifts, assignments, availability, and performance from one centralized dashboard. Improves accountability, balances workloads, and boosts overall team productivity with real-time visibility."
-  points={[
-    "Shift & Availability Tracking",
-    "Performance Monitoring",
-    "Workload Balancing",
-    "Real-Time Resource Visibility",
-  ]}
-  reversed={true}
-/>
-
+          image="https://static.vecteezy.com/system/resources/previews/026/567/943/original/human-resources-management-hr-department-employer-selects-candidates-online-recruitment-agency-employment-headhunting-business-modern-flat-cartoon-style-illustration-on-white-background-vector.jpg"
+          title="Staff & Resource Management"
+          description="Manage staff shifts, assignments, availability, and performance from one centralized dashboard. Improves accountability, balances workloads, and boosts overall team productivity with real-time visibility."
+          points={[
+            "Shift & Availability Tracking",
+            "Performance Monitoring",
+            "Workload Balancing",
+            "Real-Time Resource Visibility",
+          ]}
+          reversed={true}
+        />
 
       </div>
     </section>

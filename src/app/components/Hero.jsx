@@ -14,7 +14,7 @@ export default function Cover() {
       <div
         className="
           absolute top-0 left-0 w-full 
-          h-[220px] sm:h-[220px] md:h-[260px] 
+          h-[270px] sm:h-[220px] md:h-[260px] 
           bg-blue-600
         "
         style={{
@@ -89,7 +89,7 @@ export default function Cover() {
 
         <p className="text-gray-600 text-sm sm:text-base mt-4 sm:mt-6 leading-relaxed max-w-sm">
           Ameya IT Solutions specializes in SAP Integration, Cloud Engineering,
-          AI Automation, and full-stack development — helping businesses innovate
+          AI Automation, and full-stack development helping businesses innovate
           and accelerate digital transformation.
         </p>
       </div>
