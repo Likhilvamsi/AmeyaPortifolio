@@ -1,95 +1,153 @@
 export default function Cover() {
-  const coverImg =
-    "https://images.unsplash.com/photo-1484249170766-998fa6efe3c0?grayscale&auto=format&w=1400&q=80";
+  const mobileImg =
+    "https://tenetlaw.co.uk/wp-content/uploads/2021/07/Tenet-explains-fintech-banks.jpg";
+
+  const desktopImg =
+    "https://images.unsplash.com/photo-1484249170766-998fa6efe3c0?auto=format&w=1400&q=80";
 
   return (
-    <div
-      className="
-        relative w-full 
-        h-[480px] sm:h-[600px] md:h-[650px]
-        bg-white overflow-hidden rounded-2xl
-      "
-    >
-      {/* BLUE LEFT TRIANGLE — FIXED FOR MOBILE + RESTORED FOR DESKTOP */}
-      <div
-        className="
-          absolute top-0 left-0 w-full 
-          h-[300px] sm:h-[330px] md:h-[350px] 
-          bg-blue-600
-        "
-        style={{
-          clipPath: "polygon(0 0, 80% 0, 0 100%)",
-        }}
-      ></div>
+    <div className="w-full bg-white">
 
-      {/* RIGHT BLUE DIAGONAL SHAPE — HIDE ON MOBILE */}
-      <div
-        className="
-          hidden sm:block
-          absolute top-0 right-0
-          w-[60%] md:w-[55%] h-full bg-blue-500/80
-        "
-        style={{
-          clipPath: "polygon(55% 0, 100% 0, 100% 100%, 0 70%)",
-        }}
-      ></div>
+      {/* ------------------------------------------------- */}
+      {/* 📱 MOBILE VIEW — with BLUE APPBAR                 */}
+      {/* ------------------------------------------------- */}
+      <div className="block sm:hidden w-full bg-white rounded-2xl overflow-hidden flex flex-col relative">
 
-      {/* RIGHT IMAGE OVERLAY — HIDE ON MOBILE */}
-      <div
-        className="
-          hidden sm:block
-          absolute right-0 top-0 
-          w-[60%] md:w-[55%] h-full overflow-hidden
-        "
-        style={{
-          clipPath: "polygon(55% 0, 100% 0, 100% 100%, 0 70%)",
-        }}
-      >
-        <img
-          src={coverImg}
-          className="w-full h-full object-cover opacity-80"
-          alt="Company Cover"
-        />
-      </div>
-
-      {/* LOGO + TITLE */}
-      <div className="absolute top-6 left-6 sm:top-10 sm:left-10 text-white">
-        <div className="flex items-center gap-3">
+        {/* BLUE APPBAR */}
+        <div className="w-full bg-blue-600 py-4 px-5 flex items-center gap-3 shadow-md">
           <img
             src="/ameya_logo.png"
-            alt="Ameya IT Logo"
-            className="
-              w-12 h-12 sm:w-16 sm:h-16 
-              object-contain rounded-full bg-white p-2 shadow-xl
-            "
+            alt="Ameya Logo"
+            className="w-10 h-10 bg-white rounded-full p-1 object-contain"
           />
           <div>
-            <h2 className="text-lg sm:text-2xl font-bold tracking-wide">
+            <h2 className="text-white text-lg font-semibold leading-tight">
               Ameya IT Solutions
             </h2>
-            <p className="text-xs sm:text-sm opacity-90">
+            <p className="text-white text-xs opacity-90 -mt-1">
               Your Vision and Our Innovation
             </p>
           </div>
         </div>
+
+        {/* MAIN CONTENT */}
+        <div className="p-6">
+
+          {/* Company Profile Heading */}
+          <h1 className="text-4xl font-bold text-gray-900 leading-tight">
+            COMPANY
+          </h1>
+          <h1 className="text-4xl font-bold text-blue-600 -mt-1">
+            PROFILE
+          </h1>
+
+          {/* Company Matter */}
+          <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+            Ameya IT Solutions specializes in SAP Integration, Cloud Engineering,
+            AI Automation, and full-stack development. We help businesses innovate,
+            modernize operations, and accelerate digital transformation with
+            scalable enterprise solutions.
+          </p>
+
+          {/* IMAGE (NEW IMAGE YOU REQUESTED) */}
+          <div className="w-full h-64 mt-6 rounded-xl overflow-hidden shadow-md">
+            <img
+              src={mobileImg}
+              alt="Company"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
       </div>
 
-      {/* COMPANY PROFILE TEXT */}
-      <div className="absolute bottom-10 left-6 sm:left-12 max-w-xs sm:max-w-md">
+      {/* ------------------------------------------------- */}
+      {/* 💻 DESKTOP VIEW — your original diagonal design    */}
+      {/* ------------------------------------------------- */}
+      <div className="hidden sm:block">
+        <div
+          className="
+            relative w-full 
+            h-[600px] md:h-[650px]
+            bg-white overflow-hidden rounded-2xl
+          "
+        >
+          {/* BLUE LEFT TRIANGLE */}
+          <div
+            className="
+              absolute top-0 left-0 w-full 
+              h-[350px] md:h-[380px] bg-blue-600
+            "
+            style={{
+              clipPath: "polygon(0 0, 80% 0, 0 100%)",
+            }}
+          ></div>
 
-        <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 leading-tight">
-          COMPANY
-        </h1>
+          {/* RIGHT BLUE DIAGONAL SHAPE */}
+          <div
+            className="
+              absolute top-0 right-0
+              w-[55%] h-full bg-blue-500/80
+            "
+            style={{
+              clipPath: "polygon(55% 0, 100% 0, 100% 100%, 0 70%)",
+            }}
+          ></div>
 
-        <h1 className="text-3xl sm:text-5xl font-bold text-blue-600 -mt-2 sm:-mt-3">
-          PROFILE
-        </h1>
+          {/* RIGHT IMAGE OVERLAY */}
+          <div
+            className="
+              absolute right-0 top-0 
+              w-[55%] h-full overflow-hidden
+            "
+            style={{
+              clipPath: "polygon(55% 0, 100% 0, 100% 100%, 0 70%)",
+            }}
+          >
+            <img
+              src={desktopImg}
+              className="w-full h-full object-cover opacity-80"
+              alt="Cover"
+            />
+          </div>
 
-        <p className="text-gray-600 text-sm sm:text-base mt-4 sm:mt-6 leading-relaxed max-w-sm">
-          Ameya IT Solutions specializes in SAP Integration, Cloud Engineering,
-          AI Automation, and full-stack development helping businesses innovate
-          and accelerate digital transformation.
-        </p>
+          {/* LOGO + TITLE */}
+          <div className="absolute top-10 left-10 text-white">
+            <div className="flex items-center gap-3">
+              <img
+                src="/ameya_logo.png"
+                alt="Ameya IT Logo"
+                className="w-16 h-16 object-contain rounded-full bg-white p-2 shadow-xl"
+              />
+              <div>
+                <h2 className="text-2xl font-bold tracking-wide">
+                  Ameya IT Solutions
+                </h2>
+                <p className="text-sm opacity-90">
+                  Your Vision and Our Innovation
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* COMPANY PROFILE TEXT */}
+          <div className="absolute bottom-10 left-12 max-w-md">
+
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              COMPANY
+            </h1>
+
+            <h1 className="text-5xl font-bold text-blue-600 -mt-3">
+              PROFILE
+            </h1>
+
+            <p className="text-gray-600 text-base mt-6 leading-relaxed">
+              Ameya IT Solutions specializes in SAP Integration, Cloud
+              Engineering, AI Automation, and full-stack development helping
+              businesses innovate and accelerate digital transformation.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
