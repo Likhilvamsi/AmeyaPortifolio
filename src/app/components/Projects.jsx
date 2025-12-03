@@ -33,20 +33,6 @@ export default function Projects() {
             PROJECTS (ALTERNATING SLIDES)
         ===================================================== */}
 
-        <ProjectItem
-          image="https://pabau.com/wp-content/uploads/2024/01/BLOG_The-ultimate-guide-to-salon-management-software-in-2024-1.webp"
-          title="Salon Management System"
-          description="A fully integrated platform including online booking, staff management,
-          offers, ratings & customer tracking. Built using Python, FastAPI, MySQL, 
-          React, and cloud-native architecture."
-          points={[
-            "Online Scheduling System",
-            "Offers & Loyalty Engine",
-            "Admin & Staff Dashboard",
-            "Real-time Notifications",
-          ]}
-          reversed={false}
-        />
 
         <ProjectItem
           image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=1200&q=80"
