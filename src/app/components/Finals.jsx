@@ -24,7 +24,7 @@ export default function IndustriesPartnerEngagement() {
             "Finance & Banking",
             "Logistics & Supply Chain",
             "Healthcare",
-            "Salon & Service Marketplace",
+            "Service Marketplace",
             "Manufacturing & ERP",
           ].map((item, i) => (
             <span
